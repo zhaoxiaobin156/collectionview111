@@ -14,7 +14,8 @@
 		0412DDCD1D83B06C00AE1176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0412DDCC1D83B06C00AE1176 /* Assets.xcassets */; };
 		0412DDD01D83B06C00AE1176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0412DDCE1D83B06C00AE1176 /* LaunchScreen.storyboard */; };
 		0412DDD91D83B0C000AE1176 /* ZXBLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412DDD81D83B0C000AE1176 /* ZXBLayout.m */; };
-		0412DDDB1D83E33B00AE1176 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0412DDDA1D83E33B00AE1176 /* 1.png */; };
+		0412DDDF1D83E56D00AE1176 /* XMGPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412DDDD1D83E56D00AE1176 /* XMGPhoneCell.m */; };
+		0412DDE01D83E56D00AE1176 /* XMGPhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0412DDDE1D83E56D00AE1176 /* XMGPhoneCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,9 @@
 		0412DDD11D83B06C00AE1176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0412DDD71D83B0C000AE1176 /* ZXBLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBLayout.h; sourceTree = "<group>"; };
 		0412DDD81D83B0C000AE1176 /* ZXBLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXBLayout.m; sourceTree = "<group>"; };
-		0412DDDA1D83E33B00AE1176 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		0412DDDC1D83E56D00AE1176 /* XMGPhoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPhoneCell.h; sourceTree = "<group>"; };
+		0412DDDD1D83E56D00AE1176 /* XMGPhoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPhoneCell.m; sourceTree = "<group>"; };
+		0412DDDE1D83E56D00AE1176 /* XMGPhoneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPhoneCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +66,15 @@
 		0412DDBF1D83B06C00AE1176 /* collectionview--demo */ = {
 			isa = PBXGroup;
 			children = (
-				0412DDDA1D83E33B00AE1176 /* 1.png */,
 				0412DDC31D83B06C00AE1176 /* AppDelegate.h */,
 				0412DDC41D83B06C00AE1176 /* AppDelegate.m */,
 				0412DDC61D83B06C00AE1176 /* ViewController.h */,
 				0412DDC71D83B06C00AE1176 /* ViewController.m */,
 				0412DDD71D83B0C000AE1176 /* ZXBLayout.h */,
 				0412DDD81D83B0C000AE1176 /* ZXBLayout.m */,
+				0412DDDC1D83E56D00AE1176 /* XMGPhoneCell.h */,
+				0412DDDD1D83E56D00AE1176 /* XMGPhoneCell.m */,
+				0412DDDE1D83E56D00AE1176 /* XMGPhoneCell.xib */,
 				0412DDC91D83B06C00AE1176 /* Main.storyboard */,
 				0412DDCC1D83B06C00AE1176 /* Assets.xcassets */,
 				0412DDCE1D83B06C00AE1176 /* LaunchScreen.storyboard */,
@@ -144,8 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0412DDE01D83E56D00AE1176 /* XMGPhoneCell.xib in Resources */,
 				0412DDD01D83B06C00AE1176 /* LaunchScreen.storyboard in Resources */,
-				0412DDDB1D83E33B00AE1176 /* 1.png in Resources */,
 				0412DDCD1D83B06C00AE1176 /* Assets.xcassets in Resources */,
 				0412DDCB1D83B06C00AE1176 /* Main.storyboard in Resources */,
 			);
@@ -160,6 +165,7 @@
 			files = (
 				0412DDD91D83B0C000AE1176 /* ZXBLayout.m in Sources */,
 				0412DDC81D83B06C00AE1176 /* ViewController.m in Sources */,
+				0412DDDF1D83E56D00AE1176 /* XMGPhoneCell.m in Sources */,
 				0412DDC51D83B06C00AE1176 /* AppDelegate.m in Sources */,
 				0412DDC21D83B06C00AE1176 /* main.m in Sources */,
 			);

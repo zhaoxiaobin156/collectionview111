@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "ZXBLayout.h"
+#import "XMGPhoneCell.h"
 
-@interface ViewController ()<UICollectionViewDataSource>
+@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+/**/
+
 
 @end
-static NSString *identifier = @"item";
+static NSString *phoneid = @"phoneid";
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -21,7 +24,7 @@ static NSString *identifier = @"item";
 //    创建布局
     ZXBLayout *layout = [[ZXBLayout alloc]init];
     layout.itemSize = CGSizeMake(200, 240);
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+   
 //    layout.minimumInteritemSpacing =100;
     layout.minimumLineSpacing = 20;
 //    创建frame
@@ -32,25 +35,32 @@ static NSString *identifier = @"item";
 //    用 布局 和  frame 创建collectionview
     UICollectionView *collectionview = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
     collectionview.dataSource = self;
+    collectionview.delegate = self;
     [self.view addSubview:collectionview];
     
 //    注册item
-    [collectionview registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
+//    [collectionview registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
   
+    [collectionview registerNib:[UINib nibWithNibName:NSStringFromClass([XMGPhoneCell class]) bundle:nil] forCellWithReuseIdentifier:phoneid];
+    
+    
 }
 
 #pragma mark---   UICollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 30;
+    return 20;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor yellowColor];
-    UIImageView *imgV =[[UIImageView alloc]initWithFrame:cell.bounds];
-    imgV.image = [UIImage imageNamed:@"1"];
-    [cell.contentView addSubview:imgV];
+    XMGPhoneCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:phoneid forIndexPath:indexPath];
+    
+    cell.imageName =[NSString stringWithFormat:@"%zd",indexPath.item];
+    
     return  cell;
     
+}
+#pragma  mark--UICollectionViewDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"doubi----%zd",indexPath.item);
 }
 
 
